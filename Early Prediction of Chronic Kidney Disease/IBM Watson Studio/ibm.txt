@@ -1,0 +1,5 @@
+IBM apikey: Y-gefoTlf5vIgow-kK6y6gGonehuZjuYBNGq7smfO_cN
+
+model id: 'cac6569a-8f59-4a97-bcd5-7ec51440c9b2'
+
+endpoints: https://us-south.ml.cloud.ibm.com/ml/v4/deployments/8a50bec4-e346-45c3-b0bb-ff087162c131/predictions?version=2021-05-01

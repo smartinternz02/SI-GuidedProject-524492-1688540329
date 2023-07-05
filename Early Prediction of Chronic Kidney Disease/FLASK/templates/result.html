@@ -1,0 +1,40 @@
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Chronic Kidney Disease</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+		<link rel="stylesheet" href="C:\Users\admin\Documents\FLASK\static\style1.css">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Chronic Kidney Disease</span></h2>
+            <div class='description'>
+    			<p>A ML based Application for Kidney Disease Prediction</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction_text==0 %}
+				<h1>Prediction: <span class='danger'>Oops! The diagnosis reveals that you have Chronic Kidney Disease, which will require ongoing medical management and lifestyle adjustments.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='oops.gif') }}" alt=" Sad Image" width="200" height="400">
+			{% elif prediction_text==1 %}
+				<h1>Prediction: <span class='safe'>Great! Your diagnosis indicates that you are free from Chronic Kidney Disease, and you can continue with your normal health routine</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='happy.gif') }}" alt=" Happy Image" width="200" height="400">
+			{% endif %}
+		</div>
+		<form action="{{ url_for('my_home') }}" method="[POST,GET]">
+			<input type="submit" class="my-cta-button" value="HOME">
+		</form>
+
+		
+
+	</body>
+</html>
